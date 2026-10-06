@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaunchNest | Where Startups Take Flight</title>
+    <meta name="description" content="Manage the entire incubation lifecycle from a single, beautiful platform. Connect founders, mentors, and investors with enterprise-grade data rooms." />
+    <meta property="og:title" content="SIIMS | The OS for Startup Incubation" />
+    <meta property="og:description" content="Unify your entire accelerator program. Seamless workflows for founders, intelligent matching for mentors, and secure deal rooms for investors." />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#020617" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+    <script>
+      // Applies the stored theme before first paint to avoid a flash.
+      // Midnight (dark) is the default — only an explicit 'aurora' opts out.
+      // The matching default lives in components/shared/ThemeToggle.tsx.
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'aurora') {
+            document.documentElement.classList.remove('dark');
+          } else {
+            document.documentElement.classList.add('dark');
+          }
+        } catch (e) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

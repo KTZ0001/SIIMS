@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SIIMS Executive Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&amp;family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary": "#4f2500",
+                      "on-secondary-fixed-variant": "#6900b3",
+                      "surface-bright": "#393841",
+                      "secondary-container": "#6f00be",
+                      "on-primary-fixed-variant": "#2f2ebe",
+                      "primary-fixed": "#e1e0ff",
+                      "outline": "#908fa0",
+                      "inverse-on-surface": "#303038",
+                      "on-error-container": "#ffdad6",
+                      "on-secondary-fixed": "#2c0051",
+                      "surface-container-highest": "#34343d",
+                      "error": "#ffb4ab",
+                      "on-primary-fixed": "#07006c",
+                      "on-surface-variant": "#c7c4d7",
+                      "on-primary-container": "#0d0096",
+                      "outline-variant": "#464554",
+                      "secondary-fixed": "#f0dbff",
+                      "inverse-surface": "#e4e1ed",
+                      "secondary-fixed-dim": "#ddb7ff",
+                      "tertiary-fixed": "#ffdcc5",
+                      "on-secondary": "#490080",
+                      "surface-container": "#1f1f27",
+                      "on-background": "#e4e1ed",
+                      "surface-tint": "#c0c1ff",
+                      "secondary": "#ddb7ff",
+                      "primary-fixed-dim": "#c0c1ff",
+                      "surface-container-lowest": "#0d0d15",
+                      "tertiary-container": "#d97721",
+                      "tertiary-fixed-dim": "#ffb783",
+                      "surface-variant": "#34343d",
+                      "surface-dim": "#13131b",
+                      "on-tertiary-fixed": "#301400",
+                      "primary": "#c0c1ff",
+                      "on-surface": "#e4e1ed",
+                      "tertiary": "#ffb783",
+                      "on-error": "#690005",
+                      "error-container": "#93000a",
+                      "surface-container-high": "#292932",
+                      "inverse-primary": "#494bd6",
+                      "background": "#13131b",
+                      "surface": "#13131b",
+                      "surface-container-low": "#1b1b23",
+                      "on-primary": "#1000a9",
+                      "on-tertiary-fixed-variant": "#703700",
+                      "on-secondary-container": "#d6a9ff",
+                      "primary-container": "#8083ff",
+                      "on-tertiary-container": "#452000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "stack-lg": "32px",
+                      "gutter": "24px",
+                      "stack-sm": "8px",
+                      "margin-mobile": "16px",
+                      "container-max": "1440px",
+                      "stack-md": "16px",
+                      "margin-desktop": "48px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "body-md": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Geist"
+                      ],
+                      "body-lg": [
+                              "Inter"
+                      ],
+                      "label-sm": [
+                              "Geist"
+                      ],
+                      "label-md": [
+                              "Geist"
+                      ],
+                      "headline-lg": [
+                              "Geist"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Geist"
+                      ]
+              },
+              "fontSize": {
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-sm": [
+                              "12px",
+                              {
+                                      "lineHeight": "14px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "label-md": [
+                              "14px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "letterSpacing": "0",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "48px",
+                              {
+                                      "lineHeight": "56px",
+                                      "letterSpacing": "-0.04em",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        /* Glassmorphic utilities */
+        .glass-panel {
+            background: rgba(24, 24, 27, 0.6);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .btn-primary {
+            background: linear-gradient(to right, theme('colors.primary'), theme('colors.secondary'));
+            color: theme('colors.on-primary-fixed');
+            position: relative;
+            overflow: hidden;
+            transition: all 0.2s ease-out;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 15px theme('colors.primary' / 20%);
+        }
+        .btn-primary::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            opacity: 0;
+            transition: opacity 0.2s ease-out;
+        }
+        .btn-primary:hover::after {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface min-h-screen flex font-body-md overflow-x-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-screen w-64 fixed left-0 top-0 bg-surface-container/80 backdrop-blur-xl border-r border-outline-variant/20 shadow-2xl p-stack-md z-50">
+<!-- Brand / Header -->
+<div class="mb-stack-lg flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-secondary flex items-center justify-center">
+<img alt="Organization Logo" class="w-6 h-6 object-contain" data-alt="A sleek, modern organization logo placeholder with abstract geometric shapes in high contrast white against a dark background, fitting a premium corporate startup aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYIaWuHEJWvfiUX-2ayNxuV-IQKjmuB4bbVxKxURnlrJM-_U7GYFmnEpS6v03nst54TExFpScbCByKE112aLg0HwhZM14wbBD6ZX9Q7ekGUVjnqjWNnViczNpCM_u2DALgm-zUA1fJ74AtuwiJeOmoXo8qsGp9pSY7F5fTtDOrFRFdV80kQRs53j5uAgZjg_kSANcv9Ye1BrsHGaNaS3TCNg7CyRf6vHbJ2O5UQ_2qgtl0dOUhWgBT"/>
+</div>
+<div>
+<h1 class="font-headline-md text-headline-md font-bold text-primary">SIIMS Platform</h1>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Incubation Hub</p>
+</div>
+</div>
+<!-- Navigation Links -->
+<ul class="flex flex-col gap-1 flex-1">
+<!-- Active Tab: Dashboard -->
+<li>
+<a class="flex items-center gap-3 px-4 py-3 bg-secondary-container text-on-secondary-container rounded-xl font-semibold active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Dashboard</span>
+</a>
+</li>
+<!-- Inactive Tabs -->
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">rocket_launch</span>
+<span>Ventures</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">diversity_3</span>
+<span>Mentorship</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">payments</span>
+<span>Investment</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">leaderboard</span>
+<span>Analytics</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl active:scale-95 transition-transform" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span>Settings</span>
+</a>
+</li>
+</ul>
+<!-- CTA & Footer -->
+<div class="mt-auto flex flex-col gap-4">
+<button class="btn-primary w-full py-3 rounded-xl font-label-md text-label-md shadow-md active:scale-95 transition-transform">
+                Submit Proposal
+            </button>
+<ul class="flex flex-col gap-1 border-t border-outline-variant/20 pt-4">
+<li>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined">help_center</span>
+<span>Support</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest transition-colors duration-200 rounded-xl font-body-sm text-body-sm" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span>Sign Out</span>
+</a>
+</li>
+</ul>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 md:ml-64 relative min-h-screen">
+<!-- TopNavBar -->
+<header class="hidden md:flex justify-between items-center px-gutter h-16 w-[calc(100%-16rem)] fixed top-0 right-0 z-40 bg-surface/60 backdrop-blur-md border-b border-outline-variant/10 shadow-sm">
+<div class="flex items-center gap-6">
+<h2 class="font-headline-md text-headline-md font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">SIIMS</h2>
+<!-- Search (on left) -->
+<div class="relative hidden lg:block w-64 focus-within:ring-2 focus-within:ring-primary/50 rounded-full transition-all">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+<input class="w-full bg-surface-container-high border-none rounded-full py-2 pl-10 pr-4 text-body-sm font-body-sm text-on-surface placeholder:text-on-surface-variant/50 focus:ring-0" placeholder="Search SIIMS..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<!-- Navigation Links -->
+<nav class="hidden xl:flex gap-6">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Directory</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Resources</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-all" href="#">Events</a>
+</nav>
+<!-- Actions -->
+<div class="flex items-center gap-3">
+<button class="hidden lg:block px-4 py-2 rounded-full border border-outline-variant text-on-surface hover:bg-surface-container-highest font-label-md text-label-md transition-colors">Join Session</button>
+<button class="btn-primary px-4 py-2 rounded-full font-label-md text-label-md">Create New</button>
+<div class="flex items-center gap-2 ml-2 border-l border-outline-variant/20 pl-4">
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-2 text-on-surface-variant hover:text-primary transition-colors rounded-full hover:bg-surface-container">
+<span class="material-symbols-outlined">chat_bubble</span>
+</button>
+<button class="w-8 h-8 rounded-full overflow-hidden border border-outline-variant/30 ml-2">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a corporate executive, clean lighting, dark premium background, acting as a user profile avatar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4QVQkbp4yrXxyPQYL4h831UPBHDxrlsJ9vTp06FtscTg_HIq-qDE6-HoRxOKf6oEhGX-12u-hvH2mbypv-ySHmvMftzOM1nQ0rgc422CB1CjdODdSV11czHg2F-7udzddpG1yJ2oI6265r-_2cEaghXLGrHK2d-0FdpvpsVrPwybdIZv0aKWWtoWlSGYjBb7mQdVP355lWwJ6hZIf1DTArN8IFKEgu4XqcFsaYUcDHZ6Iq4VhjIrz"/>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="pt-24 px-gutter pb-gutter max-w-container-max mx-auto">
+<div class="mb-8">
+<h2 class="font-display-lg text-display-lg text-on-surface mb-2">Dashboard Overview</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Welcome back. Here is the latest performance data across the incubation hub.</p>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- KPI Cards (Top Row) -->
+<div class="md:col-span-3 glass-panel rounded-xl p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary-container/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">rocket</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+12% this month</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Total Ventures</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">142</h3>
+</div>
+</div>
+<div class="md:col-span-3 glass-panel rounded-xl p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-secondary-container/20 rounded-lg text-secondary">
+<span class="material-symbols-outlined">group</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active now</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Active Mentorships</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">86</h3>
+</div>
+</div>
+<div class="md:col-span-3 glass-panel rounded-xl p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-tertiary-container/20 rounded-lg text-tertiary">
+<span class="material-symbols-outlined">account_balance_wallet</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">+$2.4M Q3</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Total Investment</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">$18.5M</h3>
+</div>
+</div>
+<div class="md:col-span-3 glass-panel rounded-xl p-6 flex flex-col justify-between">
+<div class="flex justify-between items-start mb-4">
+<div class="p-2 bg-primary/20 rounded-lg text-primary">
+<span class="material-symbols-outlined">flag</span>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">24 pending</span>
+</div>
+<div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-1">Milestones Reached</p>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">312</h3>
+</div>
+</div>
+<!-- Main Chart Area -->
+<div class="md:col-span-8 glass-panel rounded-xl p-6 min-h-[400px] flex flex-col">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-on-surface">Growth Analytics</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm border border-outline-variant/30">1W</button>
+<button class="px-3 py-1 rounded-md bg-primary-container/20 text-primary font-label-sm text-label-sm border border-primary/30">1M</button>
+<button class="px-3 py-1 rounded-md bg-surface-container text-on-surface font-label-sm text-label-sm border border-outline-variant/30">1Y</button>
+</div>
+</div>
+<!-- Placeholder for Chart -->
+<div class="flex-1 relative rounded-lg overflow-hidden border border-outline-variant/10 bg-surface-container-lowest/50 flex items-center justify-center">
+<p class="text-on-surface-variant/50 font-label-md">Interactive Chart Visualization Space</p>
+<!-- Simulating a chart line -->
+<div class="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-primary/10 to-transparent"></div>
+<svg class="absolute inset-0 w-full h-full opacity-50" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M0 80 Q 20 70 40 85 T 80 50 T 100 30" fill="none" stroke="url(#chartGrad)" stroke-width="2" vector-effect="non-scaling-stroke"></path>
+<defs>
+<lineargradient id="chartGrad" x1="0%" x2="100%" y1="0%" y2="0%">
+<stop offset="0%" stop-color="theme('colors.primary')"></stop>
+<stop offset="100%" stop-color="theme('colors.secondary')"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<!-- Quick Actions Panel -->
+<div class="md:col-span-4 glass-panel rounded-xl p-6 flex flex-col">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-6">Quick Actions</h3>
+<div class="flex flex-col gap-4 flex-1">
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors border border-outline-variant/20 text-left group">
+<div class="p-2 rounded-md bg-surface-container border border-outline-variant/30 group-hover:border-primary/50 transition-colors">
+<span class="material-symbols-outlined text-primary">add_business</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Onboard New Venture</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Initiate incubation process</p>
+</div>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors border border-outline-variant/20 text-left group">
+<div class="p-2 rounded-md bg-surface-container border border-outline-variant/30 group-hover:border-secondary/50 transition-colors">
+<span class="material-symbols-outlined text-secondary">calendar_today</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Schedule Session</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Book mentorship or review</p>
+</div>
+</button>
+<button class="flex items-center gap-4 p-4 rounded-lg bg-surface-container-high hover:bg-surface-container-highest transition-colors border border-outline-variant/20 text-left group">
+<div class="p-2 rounded-md bg-surface-container border border-outline-variant/30 group-hover:border-tertiary/50 transition-colors">
+<span class="material-symbols-outlined text-tertiary">campaign</span>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-surface">Post Announcement</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Broadcast to all ventures</p>
+</div>
+</button>
+</div>
+</div>
+<!-- Activity Timeline -->
+<div class="md:col-span-12 glass-panel rounded-xl p-6">
+<div class="flex justify-between items-center mb-6">
+<h3 class="font-headline-md text-headline-md text-on-surface">Activity Timeline</h3>
+<a class="font-label-sm text-label-sm text-primary hover:underline" href="#">View All</a>
+</div>
+<div class="relative pl-6 border-l border-outline-variant/30 ml-4 space-y-8">
+<!-- Timeline Item 1 -->
+<div class="relative">
+<div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-primary ring-4 ring-background"></div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-label-md text-label-md text-on-surface">Series A Funding Secured</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">2 hours ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-2">Venture 'QuantumLeap' successfully closed their Series A round.</p>
+<div class="inline-flex items-center gap-2 px-2 py-1 rounded-md bg-surface-container border border-outline-variant/20">
+<span class="material-symbols-outlined text-[16px] text-primary">verified</span>
+<span class="font-label-sm text-label-sm">Milestone</span>
+</div>
+</div>
+<!-- Timeline Item 2 -->
+<div class="relative">
+<div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-secondary ring-4 ring-background"></div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-label-md text-label-md text-on-surface">New Mentor Matched</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">5 hours ago</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Dr. Sarah Jenkins matched with 'EcoTech Solutions' for technical guidance.</p>
+</div>
+<!-- Timeline Item 3 -->
+<div class="relative">
+<div class="absolute -left-[31px] top-1 w-4 h-4 rounded-full bg-surface-variant ring-4 ring-background border border-outline-variant"></div>
+<div class="flex justify-between items-start mb-1">
+<h4 class="font-label-md text-label-md text-on-surface">Quarterly Review Scheduled</h4>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Yesterday</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Platform-wide Q3 performance review meetings have been generated.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</body></html>

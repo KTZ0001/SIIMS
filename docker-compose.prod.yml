@@ -1,0 +1,10 @@
+# SIIMS is a client-side demo: no database, no API server.
+# This builds the React app and serves the static bundle through Nginx.
+services:
+  frontend:
+    build:
+      context: ./frontend
+    container_name: siims-frontend
+    restart: unless-stopped
+    ports:
+      - '8080:80'
